@@ -1,0 +1,31 @@
+{
+  "name": "matahari",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kafuka-fuura/matahari.git"
+  },
+  "author": "a88y",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/kafuka-fuura/matahari/issues"
+  },
+  "homepage": "https://github.com/kafuka-fuura/matahari#readme",
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "description": "",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
