@@ -1,0 +1,42 @@
+@import "./reset.less";
+
+@bg-red : #FF0000;
+
+.main-container {
+	width: 100%;
+	max-width: 375px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.header-container {
+	background-color: @bg-red;
+}
+
+.header-search {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	.form-group {
+		margin: 0;
+		label {
+			display: none;
+		}
+	}
+}
+
+.body-container {
+	min-height: 100vh;
+	min-height: calc( 100vh - 52px );
+	&.empty {
+		background-image: url("/static/images/mds-logo.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 65%;
+	}
+	&.noresult {
+		background-image: url("/static/images/search-not-found.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 65%;
+	}
+}
