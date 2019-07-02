@@ -15,7 +15,7 @@ class Header extends Component {
 									name="q" 
 									id="search" 
 									placeholder="Search Here.."
-									onChange="{ this.testMethod( value ) }" />
+									onChange="{(e)=>this.testMethod(e)}" />
 				        </FormGroup>
 			        </Form>
 				</Col>
@@ -23,8 +23,11 @@ class Header extends Component {
 		);
 	}
 
-	testMethod( a ) {
-		console.log( a );
+	testMethod( e ) {
+		// console.log( e );
+		const { value } = document.querySelector( e.target.getAttribute("data-input") );
+
+		console.log( value );
 	}
 }
 
