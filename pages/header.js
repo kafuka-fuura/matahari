@@ -13,7 +13,8 @@ class Header extends Component {
 							<Label for="search">Search</Label>
 							<Input type="text" 
 									name="q" 
-									id="search" 
+									id="search"
+									className="search-input"
 									placeholder="Search Here.."
 									onChange="{(e)=>this.testMethod(e)}" />
 				        </FormGroup>

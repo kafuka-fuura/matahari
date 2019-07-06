@@ -8,14 +8,17 @@ import {
 } from "reactstrap";
 
 import Header from "./header";
+import Toolbar from "./toolbar";
+import Products from "./products";
 
 const App = () => (
 	<div className="main-container">
 		<div className="header-container container">
 			<Header />
 		</div>
-		<div className="body-container noresult">
-			
+		<div className="body-container empty">
+			<Toolbar />
+			<Products />
 		</div>
 	</div>
 );
