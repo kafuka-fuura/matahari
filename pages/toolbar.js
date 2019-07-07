@@ -15,10 +15,12 @@ class Products extends Component {
 					<FormGroup className="sort">
 						<Label for="sortby">Sort by:</Label>
 						<Input type="select" name="sortby" id="sortby">
-							<option>Harga Terendah</option>
+							<option>Populer</option>
+							<option>Terbaru</option>
+							<option selected>Harga Terendah</option>
 							<option>Harga Tertinggi</option>
-							<option>Nama a-z</option>
-							<option>Nama z-a</option>
+							<option>Diskon Terendah</option>
+							<option>Diskon Tertinggi</option>
 						</Input>
 					</FormGroup>
 				</div>

@@ -16,7 +16,7 @@ const App = () => (
 		<div className="header-container container">
 			<Header />
 		</div>
-		<div className="body-container empty">
+		<div className="body-container">
 			<Toolbar />
 			<Products />
 		</div>
