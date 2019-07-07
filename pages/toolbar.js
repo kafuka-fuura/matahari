@@ -17,7 +17,7 @@ class Products extends Component {
 						<Input type="select" name="sortby" id="sortby">
 							<option>Populer</option>
 							<option>Terbaru</option>
-							<option selected>Harga Terendah</option>
+							<option>Harga Terendah</option>
 							<option>Harga Tertinggi</option>
 							<option>Diskon Terendah</option>
 							<option>Diskon Tertinggi</option>

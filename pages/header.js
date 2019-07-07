@@ -4,11 +4,35 @@ import { Row, Col, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
 class Header extends Component {
+
+	constructor() {
+		super();
+		this.state = {
+			q: '',
+		}
+	}
+
+	changeHandler = evt => {
+		// console.log( e );
+		var q = evt.target.value;
+		this.setState({
+	        [evt.target.name]: q,
+	    });
+	}
+
+	submitHandler = evt => {
+		evt.preventDefault();
+		if( this.state.q.length >= 3 ) {
+			console.log( this.state.q );
+			this.getInitialProps().runSearch( this.state.q );
+		}
+	}
+
 	render() {
 		return(
 			<Row>
 				<Col xs="12">
-					<Form className="header-search">
+					<Form className="header-search" onSubmit={this.submitHandler}>
 				        <FormGroup>
 							<Label for="search">Search</Label>
 							<Input type="text" 
@@ -16,19 +40,13 @@ class Header extends Component {
 									id="search"
 									className="search-input"
 									placeholder="Search Here.."
-									onChange="{(e)=>this.testMethod(e)}" />
+									value={this.state.q}
+									onChange={this.changeHandler} />
 				        </FormGroup>
 			        </Form>
 				</Col>
 			</Row>
 		);
-	}
-
-	testMethod( e ) {
-		// console.log( e );
-		const { value } = document.querySelector( e.target.getAttribute("data-input") );
-
-		console.log( value );
 	}
 }
 
