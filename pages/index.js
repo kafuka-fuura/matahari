@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 
 import "../static/css/styles.less";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -12,6 +12,8 @@ import {
 import Header from "./header";
 import Toolbar from "./toolbar";
 import Products from "./products";
+
+const MyContext = React.createContext(null);
 
 class App extends React.Component {
 
@@ -26,28 +28,27 @@ class App extends React.Component {
 	}
 
 	render() {
-		const {store} = this.props;
+
+		const store = this.props;
+
 		return(
-			<div className="main-container">
-				<Provider store={store}>
+
+			<MyContext.Provider value="lalala" >
+				<div className="main-container">
+				
 					<div className="header-container container">
 						<Header />
 					</div>
-					<div className="body-container empty">
+					<div className="body-container">
 						<Toolbar />
 						<Products />
 					</div>
-				</Provider>
-			</div>
+				
+				</div>
+			</MyContext.Provider>
 		)
 	}
 }
 
-const mapStateToProps = ( q ) => {
-   return {
-		qSearch : q,
-   }
-}
 
-
-export default connect(mapStateToProps, null)(App);
+export default App;
